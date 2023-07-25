@@ -7,9 +7,13 @@ part 'login_event.dart';
 part 'login_state.dart';
 
 class LoginBloc extends Bloc<LoginEvent, LoginState> {
-  LoginBloc() : super(const LoginInitial('username', 'password')) {
+  LoginBloc() : super(LoginInitial(username, password)) {
     on<LoginEvent>((event, emit) {
       // TODO: implement event handler
     });
   }
+
+  static String get username => "";
+
+  static String get password => "null";
 }

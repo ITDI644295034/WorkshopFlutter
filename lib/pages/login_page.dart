@@ -74,12 +74,16 @@ class LoginPage_State extends State<LoginPage> {
                     child: Text(
                       'Register ?',
                       style: TextStyle(
-                        color: Colors.blueAccent,fontSize: 20,fontWeight: FontWeight.bold,
+                        color: Colors.blueAccent,
+                        fontSize: 20,
+                        fontWeight: FontWeight.bold,
                       ),
-                    ), onTap:(){
-                    Navigator.pushNamed(context, AppRoute.register);
-                  },
-                  )
+                    ),
+                    onTap: () {
+                      // Navigator.pushNamed(context, AppRoute.register);
+                      print('kim:' + _username.text);
+                    },
+                  ),
                 ],
               ),
             )
@@ -140,10 +144,9 @@ class LoginPage_State extends State<LoginPage> {
   _buildButton() {
     return ElevatedButton(
         style: ElevatedButton.styleFrom(
-            primary: Colors.deepPurple,
-            padding: EdgeInsets.all(15)),
+            primary: Colors.deepPurple, padding: EdgeInsets.all(15)),
         onPressed: () {
-          if (_username.text == 'admin') {
+          if (_username.text == 'admin' && _password.text == '123') {
             Navigator.pushNamed(context, AppRoute.pro);
             print(_username.text);
           } else {
