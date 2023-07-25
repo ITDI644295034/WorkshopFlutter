@@ -6,11 +6,11 @@ import 'package:upskills/pages/register_page.dart';
 class AppRoute {
   static const login = 'login';
   static const register = 'register';
-  static const profile = 'register';
+  static const pro = 'profile';
 
   static get all => <String, WidgetBuilder>{
         login: (context) => const LoginPage(),
         register: (context) => const RegisterPage(),
-        profile: (context) => const ProfilePage(),
+        pro: (context) => const ProfilePage(),
       };
 }

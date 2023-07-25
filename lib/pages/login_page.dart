@@ -144,7 +144,7 @@ class LoginPage_State extends State<LoginPage> {
             padding: EdgeInsets.all(15)),
         onPressed: () {
           if (_username.text == 'admin') {
-            Navigator.pushNamed(context, AppRoute.profile);
+            Navigator.pushNamed(context, AppRoute.pro);
             print(_username.text);
           } else {
             print('kim' + _username.text);
