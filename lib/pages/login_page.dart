@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:upskills/bloc/count/count_bloc.dart';
 import 'package:upskills/routes.dart';
 
 class LoginPage extends StatefulWidget {
@@ -9,6 +11,7 @@ class LoginPage extends StatefulWidget {
 }
 
 class LoginPage_State extends State<LoginPage> {
+  final  _count = 0;
   final _username = TextEditingController();
   final _password = TextEditingController();
 
@@ -71,8 +74,8 @@ class LoginPage_State extends State<LoginPage> {
               child: Row(
                 children: [
                   GestureDetector(
-                    child: Text(
-                      'Register ?',
+                    child: const Text(
+                      'Register : ',
                       style: TextStyle(
                         color: Colors.blueAccent,
                         fontSize: 20,
@@ -80,10 +83,14 @@ class LoginPage_State extends State<LoginPage> {
                       ),
                     ),
                     onTap: () {
-                      // Navigator.pushNamed(context, AppRoute.register);
+                      Navigator.pushNamed(context, AppRoute.register);
                       print('kim:' + _username.text);
                     },
                   ),
+                  // Text("Count: ${context.read<CountBloc>().state.count}"),
+                  Text('Count: $_count'),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.add)),
+                  IconButton(onPressed: (){}, icon: Icon(Icons.remove)),
                 ],
               ),
             )

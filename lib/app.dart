@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+// import 'package:upskills/bloc/count/count_bloc.dart';
 import 'package:upskills/bloc/login/login_bloc.dart';
 
 // import 'package:upskills/bloc/login/login_bloc.dart';
@@ -13,13 +14,12 @@ class App extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final loginBloc = BlocProvider(create: (context) => LoginBloc());
-    return MultiBlocProvider(
-        providers: [loginBloc],
-        child: MaterialApp(
+    // final loginBloc = BlocProvider(create: (context) => LoginBloc());
+    // final countBloc = BlocProvider(create: (context) => CountBloc());
+    return MaterialApp(
           title: 'Slzl',
           routes: AppRoute.all,
           home: LoginPage(),
-        ));
+        );
   }
 }
