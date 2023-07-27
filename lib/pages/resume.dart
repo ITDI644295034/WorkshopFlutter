@@ -12,6 +12,18 @@ class ResumePage extends StatefulWidget {
 class _ResumePageState extends State<ResumePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      body: SafeArea(
+          child: Container(
+        child: Column(
+          children: [
+            CircleAvatar(
+              radius: 90,backgroundImage: NetworkImage('https://i.pinimg.com/564x/e7/14/a8/e714a8f942079ece09f5156153173adf.jpg'),
+            ),
+            Text('Solahudeen Slk')
+          ],
+        ),
+      )),
+    );
   }
 }

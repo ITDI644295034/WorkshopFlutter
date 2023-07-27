@@ -7,6 +7,7 @@ import 'package:upskills/bloc/login/login_bloc.dart';
 import 'package:upskills/pages/login_page.dart';
 import 'package:upskills/pages/profile_page.dart';
 import 'package:upskills/pages/register_page.dart';
+import 'package:upskills/pages/resume.dart';
 import 'package:upskills/routes.dart';
 
 class App extends StatelessWidget {
@@ -19,7 +20,7 @@ class App extends StatelessWidget {
     return MaterialApp(
           title: 'Slzl',
           routes: AppRoute.all,
-          home: LoginPage(),
+          home: ResumePage(),
         );
   }
 }
